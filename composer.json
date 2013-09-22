@@ -1,5 +1,5 @@
 {
-    "name": "marcojanssen/silex-rest",
+    "name": "marcojanssen/silex-service-register-provider",
     "require": {
         "silex/silex": "1.*"
     },
