@@ -1,0 +1,11 @@
+{
+    "name": "marcojanssen/silex-rest",
+    "require": {
+        "silex/silex": "1.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Marcojanssen\\": "src/"
+        }
+    }
+}
