@@ -1,6 +1,7 @@
 <?php
 namespace Marcojanssen\Provider;
 
+use InvalidArgumentException;
 use Silex\Application;
 use Silex\ServiceProviderInterface;
 
@@ -46,7 +47,7 @@ class ServiceRegisterProvider implements ServiceProviderInterface
     public function registerServiceProvider(Application $app, $provider)
     {
         if (!isset($provider['class'])) {
-            throw InvalidArgumentException::format(
+            throw new InvalidArgumentException(
                 'The service provider did not specify its "class".'
             );
         }
