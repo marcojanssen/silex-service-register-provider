@@ -71,13 +71,44 @@ class ServiceRegisterProverTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * test if a single provider can be registered
+     * test if a invalid class name is triggered
      * @expectedException InvalidArgumentException
      */
-    public function testClassNameServiceProvider()
+    public function testInvalidClassNameServiceProvider()
     {
         $app = new Application();
         $provider = array();
+        $serviceRegisterProvider = new ServiceRegisterProvider();
+        $serviceRegisterProvider->registerServiceProvider($app, $provider);
+    }
+
+    /**
+     * test if invalid values are triggered
+     * @expectedException InvalidArgumentException
+     */
+    public function testInvalidValuesServiceProvider()
+    {
+        $app = new Application();
+        $provider = array(
+            'class' => 'Marcojanssen\Provider\ServiceProviderFoo',
+            'values' => ''
+        );
+        $serviceRegisterProvider = new ServiceRegisterProvider();
+        $serviceRegisterProvider->registerServiceProvider($app, $provider);
+    }
+
+    /**
+     * test if invalid values are triggered
+     */
+    public function testValuesServiceProvider()
+    {
+        $app = new Application();
+        $provider = array(
+            'class' => 'Marcojanssen\Provider\ServiceProviderFoo',
+            'values' => array(
+                'foo' => 'baz'
+            )
+        );
         $serviceRegisterProvider = new ServiceRegisterProvider();
         $serviceRegisterProvider->registerServiceProvider($app, $provider);
     }

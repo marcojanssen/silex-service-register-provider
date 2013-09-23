@@ -23,6 +23,7 @@ class ServiceRegisterProvider implements ServiceProviderInterface
 
     /**
      * @param Application $app
+     * @codeCoverageIgnore
      */
     public function boot(Application $app)
     {
@@ -54,6 +55,12 @@ class ServiceRegisterProvider implements ServiceProviderInterface
 
         if (!isset($provider['values'])) {
             $provider['values'] = array();
+        }
+
+        if (!is_array($provider['values'])) {
+            throw new InvalidArgumentException(
+                'The service provider values should be an array.'
+            );
         }
 
         $app->register(new $provider['class'](), $provider['values']);
