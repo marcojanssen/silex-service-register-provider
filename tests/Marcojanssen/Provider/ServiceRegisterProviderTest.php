@@ -98,7 +98,7 @@ class ServiceRegisterProverTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * test if invalid values are triggered
+     * test if valid values pass
      */
     public function testValuesServiceProvider()
     {
