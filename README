@@ -1,0 +1,4 @@
+ServiceRegisterProvider
+=======================
+
+Adds a provider for registering other providers.
