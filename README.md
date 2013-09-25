@@ -30,7 +30,7 @@
 
 - Install/update your dependencies
 
-## Examples
+## Usage
 
 ### Registering a single provider
 
@@ -38,12 +38,12 @@
 ```php
 
 use Silex\Application;
-use Marcojanssen\Provider\ServiceRegisterProvider;
+use MJanssen\Provider\ServiceRegisterProvider;
 
 $app = new Application();
 
 $provider = array(
-    'class' => 'Marcojanssen\Provider\ServiceProviderFoo',
+    'class' => 'MJanssen\Provider\ServiceProviderFoo',
     'values' => array(
         'foo' => 'baz'
     )
@@ -60,17 +60,17 @@ $serviceRegisterProvider->registerServiceProvider($app, $provider);
 ```php
 
 use Silex\Application;
-use Marcojanssen\Provider\ServiceRegisterProvider;
+use MJanssen\Provider\ServiceRegisterProvider;
 
 $app = new Application();
 $serviceRegisterProvider = new ServiceRegisterProvider();
 
 $providers = array(
     array(
-        'class' => 'Marcojanssen\Provider\ServiceProviderFoo'
+        'class' => 'MJanssen\Provider\ServiceProviderFoo'
     ),
     array(
-        'class' => 'Marcojanssen\Provider\ServiceProviderBaz'
+        'class' => 'MJanssen\Provider\ServiceProviderBaz'
     )
 );
 
@@ -100,7 +100,7 @@ providers:
 
 use Silex\Application;
 use Igorw\Silex\ConfigServiceProvider;
-use Marcojanssen\Provider\ServiceRegisterProvider;
+use MJanssen\Provider\ServiceRegisterProvider;
 
 //Set all service providers
 $app->register(

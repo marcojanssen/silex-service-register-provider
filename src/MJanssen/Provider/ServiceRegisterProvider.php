@@ -1,5 +1,5 @@
 <?php
-namespace Marcojanssen\Provider;
+namespace MJanssen\Provider;
 
 use InvalidArgumentException;
 use Silex\Application;
@@ -7,7 +7,7 @@ use Silex\ServiceProviderInterface;
 
 /**
  * Class ServiceRegisterProvider
- * @package Marcojanssen\Provider
+ * @package MJanssen\Provider
  */
 class ServiceRegisterProvider implements ServiceProviderInterface
 {
