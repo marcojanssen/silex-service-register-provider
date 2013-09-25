@@ -4,6 +4,7 @@
 
 [![Build Status](https://api.travis-ci.org/marcojanssen/silex-service-register-provider.png?branch=master)](https://travis-ci.org/marcojanssen/silex-service-register-provider)
 [![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/marcojanssen/silex-service-register-provider/badges/quality-score.png?s=021de4c78b24e9d4fb68104dfe93d0b7b95da0e8)](https://scrutinizer-ci.com/g/marcojanssen/silex-service-register-provider/)
+[![Code Coverage](https://scrutinizer-ci.com/g/marcojanssen/silex-service-register-provider/badges/coverage.png?s=ad56aacb053227adba93d665bd5b3ca1bea226b1)](https://scrutinizer-ci.com/g/marcojanssen/silex-service-register-provider/)
 
 **ServiceRegisterProvider** is a provider for registering other providers.
 
