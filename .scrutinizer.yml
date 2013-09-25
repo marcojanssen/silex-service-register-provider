@@ -10,7 +10,7 @@ tools:
     php_mess_detector: true
     php_code_sniffer: true
         config:
-            standard: PSR2
+            standard: "PSR2"
     sensiolabs_security_checker: true
     php_code_coverage: true
     php_cpd: true
