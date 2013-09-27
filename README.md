@@ -23,7 +23,7 @@
 ```json
 {
     "require": {
-        "marcojanssen/silex-service-register-provider": "1.*"
+        "marcojanssen/silex-service-register-provider": "1.1.*"
     }
 }
 ```
@@ -80,13 +80,13 @@ $serviceRegisterProvider->registerServiceProviders($app, $providers);
 
 ### Registering providers with configuration
 
-For this example the [ConfigServiceProvider](https://github.com/igorw/ConfigServiceProvider) is used to read the yml file. The ServiceRegisterProvider picks the stored configuration through the node `providers` in `$app['providers']`
+For this example the [ConfigServiceProvider](https://github.com/igorw/ConfigServiceProvider) is used to read the yml file. The ServiceRegisterProvider picks the stored configuration through the node `config.providers` in `$app['config.providers']` by default. If you want to set a different key, add it as parameter when instantiating the ServiceRegisterProvider
 
 `services.yml`
 
 ```yml
 
-providers:
+custom.providers.key:
   validator:
     class: Silex\Provider\ValidatorServiceProvider
 
@@ -109,7 +109,9 @@ $app->register(
 
 //Register all providers
 $app->register(
-    new ServiceRegisterProvider()
+    new ServiceRegisterProvider('custom.providers.key')
 );
 
 ```
+
+**Note**: It's recommended to use php files instead of yml/xml/etc.
