@@ -1,5 +1,5 @@
 <?php
-namespace Marcojanssen\Provider;
+namespace MJanssen\Provider;
 
 use Silex\Application;
 use Silex\ServiceProviderInterface;
@@ -7,7 +7,7 @@ use stdClass;
 
 /**
  * Class ServiceProvider
- * @package Marcojanssen\Provider
+ * @package MJanssen\Provider
  */
 class ServiceProviderBaz implements ServiceProviderInterface
 {

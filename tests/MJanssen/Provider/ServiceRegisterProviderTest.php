@@ -1,9 +1,9 @@
 <?php
-namespace Marcojanssen\Provider;
+namespace MJanssen\Provider;
 
 use Silex\Application;
 use stdClass;
-use Marcojanssen\Provider\ServiceRegisterProvider;
+use MJanssen\Provider\ServiceRegisterProvider;
 
 class ServiceRegisterProverTest extends \PHPUnit_Framework_TestCase
 {
@@ -17,10 +17,10 @@ class ServiceRegisterProverTest extends \PHPUnit_Framework_TestCase
 
         $app['providers'] = array(
             array(
-                'class' => 'Marcojanssen\Provider\ServiceProviderFoo'
+                'class' => 'MJanssen\Provider\ServiceProviderFoo'
             ),
             array(
-                'class' => 'Marcojanssen\Provider\ServiceProviderBaz'
+                'class' => 'MJanssen\Provider\ServiceProviderBaz'
             )
         );
 
@@ -40,10 +40,10 @@ class ServiceRegisterProverTest extends \PHPUnit_Framework_TestCase
 
         $providers = array(
             array(
-                'class' => 'Marcojanssen\Provider\ServiceProviderFoo'
+                'class' => 'MJanssen\Provider\ServiceProviderFoo'
             ),
             array(
-                'class' => 'Marcojanssen\Provider\ServiceProviderBaz'
+                'class' => 'MJanssen\Provider\ServiceProviderBaz'
             )
         );
 
@@ -62,7 +62,7 @@ class ServiceRegisterProverTest extends \PHPUnit_Framework_TestCase
         $serviceRegisterProvider = new ServiceRegisterProvider();
 
         $provider = array(
-            'class' => 'Marcojanssen\Provider\ServiceProviderFoo'
+            'class' => 'MJanssen\Provider\ServiceProviderFoo'
         );
 
         $serviceRegisterProvider->registerServiceProvider($app, $provider);
@@ -90,7 +90,7 @@ class ServiceRegisterProverTest extends \PHPUnit_Framework_TestCase
     {
         $app = new Application();
         $provider = array(
-            'class' => 'Marcojanssen\Provider\ServiceProviderFoo',
+            'class' => 'MJanssen\Provider\ServiceProviderFoo',
             'values' => ''
         );
         $serviceRegisterProvider = new ServiceRegisterProvider();
@@ -104,7 +104,7 @@ class ServiceRegisterProverTest extends \PHPUnit_Framework_TestCase
     {
         $app = new Application();
         $provider = array(
-            'class' => 'Marcojanssen\Provider\ServiceProviderFoo',
+            'class' => 'MJanssen\Provider\ServiceProviderFoo',
             'values' => array(
                 'foo' => 'baz'
             )
