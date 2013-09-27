@@ -12,12 +12,25 @@ use Silex\ServiceProviderInterface;
 class ServiceRegisterProvider implements ServiceProviderInterface
 {
     /**
+     * @var
+     */
+    protected $appServiceKey;
+
+    /**
+     * @param string $appNode
+     */
+    public function __construct($appServiceKey = 'config.providers')
+    {
+        $this->appServiceKey = $appServiceKey;
+    }
+
+    /**
      * @param Application $app
      */
     public function register(Application $app)
     {
-        if(isset($app['providers'])) {
-            $this->registerServiceProviders($app, $app['providers']);
+        if(isset($app[$this->appServiceKey])) {
+            $this->registerServiceProviders($app, $app[$this->appServiceKey]);
         }
     }
 

@@ -15,7 +15,7 @@ class ServiceRegisterProverTest extends \PHPUnit_Framework_TestCase
     {
         $app = new Application();
 
-        $app['providers'] = array(
+        $app['custom.providers'] = array(
             array(
                 'class' => 'MJanssen\Provider\ServiceProviderFoo'
             ),
@@ -24,7 +24,7 @@ class ServiceRegisterProverTest extends \PHPUnit_Framework_TestCase
             )
         );
 
-        $app->register(new ServiceRegisterProvider);
+        $app->register(new ServiceRegisterProvider('custom.providers'));
 
         $this->assertEquals(new stdClass(), $app['foo']);
         $this->assertEquals(new stdClass(), $app['baz']);
