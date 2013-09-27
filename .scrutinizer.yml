@@ -11,9 +11,11 @@ tools:
     sensiolabs_security_checker: true
     php_code_coverage: true
     php_cpd: true
-        excluded_dirs: ['vendor']
+        excluded_dirs:
+            - vendor
     php_loc: true
-        excluded_dirs: ['vendor']
+        excluded_dirs:
+            - vendor
     php_pdepend: true
         excluded_dirs:
             - vendor
